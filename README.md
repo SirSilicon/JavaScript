@@ -1,2 +1,2 @@
 # JavaScript
-MMMMM
+imma be learnin' JavaScript
