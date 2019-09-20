@@ -32,6 +32,8 @@ console.log('4 % 7='modu)
 simpleOperators(numberList[0], numberList[4])
 
 function skipCount (interval, repeat, start){
+  if (repeat < 0) {console.log("error"); return}
+  if ( interval === 0 ){console.log("Infinity"); return}
   let currentCount = start
   for (var i = 0; i < repeat; i++) {
     currentCount = currentCount + interval
@@ -39,4 +41,27 @@ function skipCount (interval, repeat, start){
   }
 }
 
-skipCount (7, 10, 0)
+skipCount (0, 10, 0)
+
+function howManyTimes (interval, start, end){
+  if (interval > 0 && end < 0 || interval < 0 && end > 0 || interval === 0){console.log("Infinity"); return}
+  let currentCount = start
+  let i = start
+  let count = 0
+  while (i < end) {
+    i = i + interval
+    count++
+  }
+  console.log(count)
+}
+
+howManyTimes (-1,0,50)
+
+function customerType (points){
+  if (points >= 100){
+  console.log("gold")
+  } else {
+  console.log("silver")
+  }
+}
+customerType(99)
